@@ -8,13 +8,13 @@
 int main(void)
 {
 int lowerCase = 'a';
-int upperCase <= 'A';
+int upperCase = 'A';
 while (lowerCase <= 'z')
 {
 putchar(lowerCase);
 lowerCase +=1;
 }
-while (upperCase <= 'z')
+while (upperCase <= 'Z')
 {
 putchar(upperCase);
 upperCase +=1;
