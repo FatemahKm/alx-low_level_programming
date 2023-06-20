@@ -2,12 +2,13 @@
 
 /**
 * main - Entry point
-*
-* REturn:Always 0 (success)
+* Description: prints all lowercase alphabet except e and q
+* Return:Always 0 (success)
 */
 int main(void)
 {
-int lowerCase = 'a';
+char lowerCase = 'a';
+
 while (lowerCase <= 'z')
 {
 if (lowerCase == 'e' || lowerCase == 'q')
