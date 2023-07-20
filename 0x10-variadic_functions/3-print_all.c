@@ -2,9 +2,9 @@
 
 /**
  * format_char - formats character
- * @separator: the string separator
+ * @separator: the string seprator
  * @ap: argument pointer
- */
+*/
 void format_char(char *separator, va_list ap)
 {
 	printf("%s%c", separator, va_arg(ap, int));
@@ -12,9 +12,9 @@ void format_char(char *separator, va_list ap)
 
 /**
  * format_int - formats integer
- * @separator: the string separator
+ * @separator: the string seprator
  * @ap: argument pointer
- */
+*/
 void format_int(char *separator, va_list ap)
 {
 	printf("%s%d", separator, va_arg(ap, int));
@@ -22,13 +22,23 @@ void format_int(char *separator, va_list ap)
 
 /**
  * format_float - formats float
- * @separator: the string separator
+ * @separator: the string seprator
  * @ap: argument pointer
- */
+*/
+void format_float(char *separator, va_list ap)
+{
+	printf("%s%f", separator, va_arg(ap, double));
+}
+
+/**
+ * format_string - formats string
+ * @separator: the string seprator
+ * @ap: argument pointer
+*/
 void format_string(char *separator, va_list ap)
 {
 	char *str = va_arg(ap, char *);
-	
+
 	switch ((int)(!str))
 		case 1:
 			str = "(nil)";
@@ -39,13 +49,13 @@ void format_string(char *separator, va_list ap)
 /**
  * print_all - prints anything
  * @format: the format string
- */
+*/
 void print_all(const char * const format, ...)
 {
 	int i = 0, j;
 	char *separator = "";
 	va_list ap;
-	token_t token[] = {
+	token_t tokens[] = {
 		{"c", format_char},
 		{"i", format_int},
 		{"f", format_float},
@@ -71,4 +81,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(ap);
 }
-

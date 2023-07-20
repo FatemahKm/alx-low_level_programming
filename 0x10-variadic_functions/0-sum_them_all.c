@@ -8,9 +8,9 @@
  *
  * Return: the integer sum
  */
-int sum_them_all(const unsigned int n,...)
+int sum_them_all(const unsigned int n, ...)
 {
-	int sum = 0, i = n;
+	int s = 0, i = n;
 	va_list ap;
 
 	if (!n)
@@ -19,5 +19,5 @@ int sum_them_all(const unsigned int n,...)
 	while (i--)
 		s += va_arg(ap, int);
 	va_end(ap);
-	return(s);
+	return (s);
 }
