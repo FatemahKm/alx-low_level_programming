@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * _strlen - returns the length of a string
@@ -12,26 +12,26 @@ int _strlen(char *s)
 
 	if (!s)
 		return (0);
-	while(*s++)
+	while (*s++)
 		i++;
 	return (i);
 }
 
 /**
- * print_list - prints a linked list
- * @h: pointer to the first node
+ * print_list -  prints a linked lists
+ * @h: pointer to first node
  *
- * Return: size of  list
+ * Return: size of list
  */
 size_t print_list(const list_t *h)
 {
 	size_t i = 0;
 
-	while(h)
-	{
-		printf("[%d] %s\n", _strlen(h->str) h->str ? h->str : "(nil)");
-		h = h->next;
-		i++;
-	}
-	return(i);
+	while (h)
+{
+	printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+	h = h->next;
+	i++;
+}
+return (i);
 }
