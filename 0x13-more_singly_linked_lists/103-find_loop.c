@@ -3,14 +3,14 @@
 
 /**
  * find_listint_loop - finds a loop in a linked list
- * 
+ *
  * @head: linked list to search
  *
  * Return: address of node where loop starts/returns, NULL if no loop
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *ptr, end;
+	listint_t *ptr, *end;
 
 	if (head == NULL)
 		return (NULL);
