@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_biary - prints a number as binary string
+ * print_binary - prints a number as binary string
  * @n: the number to print
  *
  * Return: void
